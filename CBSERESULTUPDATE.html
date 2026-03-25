@@ -5,8 +5,7 @@
   <title>CBSE Class 10 Result 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="SDdmxnepyqwv1kaQugJTrRFIx7wI-VDtDzsxd9Cdw9M" />
-  
-    
+
   <style>
     body {
       margin: 0;
@@ -37,9 +36,21 @@
       margin: auto;
     }
 
-    header h1 {
-      margin: 10px 0 0;
-      font-size: 28px;
+    nav {
+      background: #002244;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .container {
@@ -55,23 +66,12 @@
       color: #003366;
     }
 
-    p {
-      line-height: 1.7;
-      font-size: 16px;
+    .section {
+      display: none;
     }
 
-    .highlight {
-      margin-top: 30px;
-      padding: 20px;
-      background: #e6f0ff;
-      border-left: 5px solid #003366;
-      font-weight: bold;
-    }
-
-    .update {
-      margin-top: 20px;
-      font-weight: bold;
-      color: #003366;
+    .active {
+      display: block;
     }
 
     footer {
@@ -87,7 +87,7 @@
 <body>
 
 <div class="topbar">
-  🔴 Latest Update: CBSE Class 10 Result 2026 will be घोषित soon!
+  🔴 Latest Update: CBSE Class 10 Result 2026 will be declared soon!
 </div>
 
 <header>
@@ -95,28 +95,64 @@
   <h1>CBSE Class 10 Result 2026</h1>
 </header>
 
+<nav>
+  <a href="#" onclick="showSection('home')">Home</a>
+  <a href="#" onclick="showSection('about')">About Us</a>
+  <a href="#" onclick="showSection('privacy')">Privacy Policy</a>
+  <a href="#" onclick="showSection('contact')">Contact</a>
+</nav>
+
 <div class="container">
-  <h2>About Class 10 CBSE Results</h2>
 
-  <p>
-    The Central Board of Secondary Education (CBSE) conducts the Class 10 board examinations every year for lakhs of students across India.
-    These exams play a crucial role in shaping the academic future of students.
-  </p>
+  <!-- HOME -->
+  <div id="home" class="section active">
+    <h2>About Class 10 CBSE Results</h2>
+    <p>
+      The Central Board of Secondary Education (CBSE) conducts Class 10 board exams every year.
+      These results are very important for students' academic future.
+    </p>
 
-  <p>
-    Students eagerly wait for their results as they determine the next step in their academic journey.
-    The evaluation process is carried out carefully to ensure accuracy and fairness.
-  </p>
+    <div style="margin-top:20px;padding:20px;background:#e6f0ff;border-left:5px solid #003366;">
+      Expected Result Date: 20 April 2026
+    </div>
 
-  <div class="highlight">
-    Class 10th CBSE result date is expected to be around 20 April 2026.
+    <p id="lastUpdate" style="margin-top:10px; color:gray;"></p>
   </div>
 
-  <p class="update">
-    Stay updated! New updates will be provided here regularly.
-  </p>
+  <!-- ABOUT -->
+  <div id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+      We provide latest updates and information about CBSE results, study materials,
+      and academic news for students across India.
+    </p>
+    <p>
+      Our goal is to deliver accurate and fast information in a simple and user-friendly way.
+    </p>
+  </div>
 
-  <p id="lastUpdate" style="margin-top:10px; color:gray;"></p>
+  <!-- PRIVACY -->
+  <div id="privacy" class="section">
+    <h2>Privacy Policy</h2>
+    <p>
+      We respect your privacy. We do not collect any personal information without your consent.
+    </p>
+    <p>
+      Third-party services like ads may use cookies to improve user experience.
+    </p>
+    <p>
+      By using our website, you agree to our privacy policy.
+    </p>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>
+      If you have any queries, feel free to contact us:
+    </p>
+    <p><b>Email:</b> horyscare@gmail.com</p>
+  </div>
 
 </div>
 
@@ -125,9 +161,14 @@
 </footer>
 
 <script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
+  }
+
   const today = new Date();
-  const date = today.toDateString();
-  document.getElementById("lastUpdate").innerHTML = "Last Updated: " + date;
+  document.getElementById("lastUpdate").innerHTML = "Last Updated: " + today.toDateString();
 </script>
 
 </body>
